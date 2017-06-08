@@ -1,5 +1,18 @@
 <?php
 
+
+//dependecy injection container
+//Bind into the container
+App::bind('App\Billing\Stripe',function(){
+	return new \App\Billing\Stripe(config('services.stripe.secret'));
+});
+
+//if the user ever resolve anything from the surface container
+$stripe = App::make('App\Billing\Stripe');
+
+dd($stripe);
+
+
 Route::get('/','PostsController@index')->name('home');
 Route::get('/posts/create','PostsController@create');
 Route::post('/posts','PostsController@store');

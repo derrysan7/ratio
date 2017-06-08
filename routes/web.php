@@ -8,7 +8,8 @@ App::bind('App\Billing\Stripe',function(){
 });
 
 //if the user ever resolve anything from the surface container
-$stripe = App::make('App\Billing\Stripe');
+$stripe = resolve('App\Billing\Stripe');
+//$stripe = App::make('App\Billing\Stripe');
 
 dd($stripe);
 

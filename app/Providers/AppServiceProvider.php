@@ -23,8 +23,12 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
+    //use this method to register things into the service container
     public function register()
     {
-        //
+        App::singleton('App\Billing\Stripe',function(){
+            return new \App\Billing\Stripe(config('services.stripe.secret'));
+        });
     }
 }

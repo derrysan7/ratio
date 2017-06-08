@@ -15,11 +15,11 @@ class PostsController extends Controller
     
 	public function index(Posts $posts)
 	{
-		dd($posts);
+		//dd($posts);
 		$posts = $posts->all();
-		// $posts = Post::latest()
-		// 	->filter(request(['month', 'year']))
-		// 	->get();
+		$posts = Post::latest()
+			->filter(request(['month', 'year']))
+			->get();
 		
 		$archives = Post::archives();
 

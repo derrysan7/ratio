@@ -15,7 +15,8 @@ class PostsController extends Controller
     
 	public function index(Posts $posts)
 	{
-		//dd($posts);
+		//return session('message');
+
 		$posts = $posts->all();
 		$posts = Post::latest()
 			->filter(request(['month', 'year']))
@@ -48,6 +49,12 @@ class PostsController extends Controller
 			//[2]existing instance
 			new Post(request(['title', 'body']))
 		);
+
+		session()->flash(
+			'message', 'Your post has now been published.'
+		);
+
+		//flash('Your message here');
 
 		return redirect('/');
 

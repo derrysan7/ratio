@@ -43,15 +43,15 @@ h6, .h6 {
 }
 
 /* Nav links */
-.blog-nav-item {
+.nav-link {
   position: relative;
   display: inline-block;
   padding: 10px;
   font-weight: 500;
   color: #cdddeb;
 }
-.blog-nav-item:hover,
-.blog-nav-item:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: #fff;
   text-decoration: none;
 }
@@ -164,4 +164,11 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+#flash-message {
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  right: 20px;
 }

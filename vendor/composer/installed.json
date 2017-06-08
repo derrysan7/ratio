@@ -2017,12 +2017,12 @@
         "version_normalized": "0.9.8.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/padraic/mockery.git",
+            "url": "https://github.com/mockery/mockery.git",
             "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/padraic/mockery/zipball/1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
+            "url": "https://api.github.com/repos/mockery/mockery/zipball/1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
             "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
             "shasum": ""
         },
@@ -3435,5 +3435,51 @@
             "testing",
             "xunit"
         ]
+    },
+    {
+        "name": "laracasts/flash",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laracasts/flash.git",
+            "reference": "1c7658652e10791d934a37bc0f6f0bd5ce5ac73f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laracasts/flash/zipball/1c7658652e10791d934a37bc0f6f0bd5ce5ac73f",
+            "reference": "1c7658652e10791d934a37bc0f6f0bd5ce5ac73f",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "dev-master",
+            "phpunit/phpunit": "^6.1"
+        },
+        "time": "2017-04-26T16:55:22+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Laracasts\\Flash": "src/"
+            },
+            "files": [
+                "src/Laracasts/Flash/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeffrey Way",
+                "email": "jeffrey@laracasts.com"
+            }
+        ],
+        "description": "Easy flash notifications"
     }
 ]

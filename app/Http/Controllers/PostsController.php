@@ -13,11 +13,12 @@ class PostsController extends Controller
 		$this->middleware('auth')->except(['index', 'show']);
 	}
     
-	public function index()
+	public function index(\App\Tag $tag = null)
 	{
 		//return session('message');
-
 		//$posts = $posts->all();
+		
+		return $tag->posts;
 		$posts = Post::latest()
 			->filter(request(['month', 'year']))
 			->get();

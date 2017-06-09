@@ -2,11 +2,11 @@
 
 namespace App\Listeners;
 
-use App\Events\SomeEvent;
+use App\Events\ThreadCreated;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendNotification
+class NotifySubscribers
 {
     /**
      * Create the event listener.
@@ -21,10 +21,10 @@ class SendNotification
     /**
      * Handle the event.
      *
-     * @param  SomeEvent  $event
+     * @param  ThreadCreated  $event
      * @return void
      */
-    public function handle(SomeEvent $event)
+    public function handle(ThreadCreated $event)
     {
         //
     }
